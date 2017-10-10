@@ -7,11 +7,11 @@
 }
 
 section{
-  height: 100vh;
+  height: 20vh;
 }
 
 header{
-  height: 20vh;
+  height: 8vh;
 }
 
 .difficulty{
@@ -28,6 +28,7 @@ header{
   height: 20vh;
   background-color: #2be;
 }
+
 #Coin_Output{
   display: inline;
   position: absolute;
