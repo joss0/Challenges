@@ -16,21 +16,25 @@ body{
   grid-template-columns: auto 800px auto;
 }
 
-section{
-  height: 20vh;
-  grid-column: 2;
-  background-color: #FFF4D0;
-  padding: 10px;
-}
-
 header{
   grid-column: 1/-1;
   height: 14vh;
   text-align: center;
   background-color: #F8E351;
   padding: 1vh;
-  box-shadow: 0 10px 5px #00000044;
+  box-shadow: 0 3px 5px #00000044;
   z-index: 2;
+}
+
+section{
+  height: 20vh;
+  grid-column: 2;
+  background-color: #FFF4D0;
+  padding: 10px;
+  box-shadow: 0 3px 20px #00000044;
+}
+section:nth-child(odd){
+  background-color: #F0E6C5;
 }
 
 .difficulty{
