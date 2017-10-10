@@ -7,14 +7,30 @@ body{
   margin: 0;
   border: 0;
   padding: 0;
+  background-color: #443C4F;
+}
+
+#content{
+  background-color: #443C4F;
+  display: grid;
+  grid-template-columns: auto 800px auto;
 }
 
 section{
   height: 20vh;
+  grid-column: 2;
+  background-color: #FFF4D0;
+  padding: 10px;
 }
 
 header{
-  height: 8vh;
+  grid-column: 1/-1;
+  height: 14vh;
+  text-align: center;
+  background-color: #F8E351;
+  padding: 1vh;
+  box-shadow: 0 10px 5px #00000044;
+  z-index: 2;
 }
 
 .difficulty{
@@ -27,16 +43,7 @@ header{
   color: green;
 }
 
-#Coin_Flip{
-  height: 20vh;
-  background-color: #2be;
-}
-
-#Coin_Output{
+#Coin_Output, #Colour{
   display: inline;
   position: absolute;
-}
-
-#Random_Colour h1, #Colour, #Random_Colour{
-  background-color: #2be;
 }

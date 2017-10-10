@@ -1,22 +1,11 @@
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-
-.animated.flip {
-  animation-duration: 0.3s;
-  animation-name: flip;
-  transform-origin: center middle;
-}
-
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
-}
-
 @keyframes flip {
-  0%, 100%{
+  0%{
     animation-timing-function: ease-out;
     transform: translate(0, 0)
       rotate3d(0, 0, 1, 0deg);
@@ -27,28 +16,30 @@
     rotate3d(0, 0, 1, 180deg);
   }
   100%{
-    transform: rotate3d(0, 0, 1, 0deg);
+    transform: translate(0, 0)
+    rotate3d(0, 0, 1, 360deg);
   }
 }
 
+.animated.flip {
+  animation-duration: 0.3s;
+  animation-name: flip;
+}
 
-@keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
   }
 
-  40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -30px, 0);
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
   }
 
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -15px, 0);
+  to {
+    transform: scale3d(1, 1, 1);
   }
+}
 
-  90% {
-    transform: translate3d(0,-4px,0);
-  }
+.pulse {
+  animation-name: pulse;
 }
