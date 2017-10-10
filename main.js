@@ -4,16 +4,30 @@ console.log('main.js loaded')
 Coin_Flip.addEventListener('click', ()=> {
   Coin_Output.innerHTML = coinFlip()
 })
-Coin_Output.parentNode.addEventListener('click', ()=>{Coin_Output.className='animated flip'})
-Coin_Output.addEventListener('animationend', ()=>{Coin_Output.className=''})
+Coin_Output.parentNode.addEventListener('click', ()=>{
+  Coin_Output.className='animated flip'
+})
+Coin_Output.addEventListener('animationend',()=>{
+  Coin_Output.className=''
+})
 
-// Happy_Numbers.addEventListener('click', ()=> {
-//   Happy_Output.innerHTML = happyNumbers(8)
-// })
+Random_Colour.addEventListener('click', ()=> {
+  c = colour()
+  Random_Colour.style.backgroundColor = c
+  Colour.innerHTML = c
+  Random_Colour.className='animated bounce'
+})
+Random_Colour.addEventListener('animationend',()=>{
+  Random_Colour.className=''
+})
 
 function coinFlip() {
   let x = Math.floor(Math.random()*2)
   return x === 1? 'Heads': 'Tails'
+}
+
+let colour = ()=> {
+  return `#${Math.floor(0xFFF*Math.random()).toString(16).padStart(3, '0')}`
 }
 
 // function happyNumbers(firstN) {

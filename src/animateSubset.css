@@ -7,7 +7,7 @@
 .animated.flip {
   animation-duration: 0.3s;
   animation-name: flip;
-  transform-origin: center;
+  transform-origin: center middle;
 }
 
 .bounce {
